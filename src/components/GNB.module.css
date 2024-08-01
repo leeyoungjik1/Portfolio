@@ -1,0 +1,28 @@
+nav{
+    height: 66px;
+    color: #D6D6D6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5.25rem;
+    box-sizing: border-box;
+
+}
+nav h1{
+    margin: 0;
+    font-size: 20px;
+    cursor: pointer;
+    mix-blend-mode: difference;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 60px;
+}
+li{
+    font-size: 20px;
+    list-style: none;
+    cursor: pointer;
+    mix-blend-mode: difference;
+}

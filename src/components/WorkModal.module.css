@@ -1,0 +1,55 @@
+.WorksContainer{
+    width: 100%; height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #03030366;
+    z-index: 20;
+    backdrop-filter: blur(3px);
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 1.25rem;
+    padding-top: 302px;
+    transition: ease .65s;
+    opacity: 0;
+    pointer-events: none;
+}
+.mainImg{
+    width: 303px;
+    height: 420px;
+    /* background-image: url(../assets/travelnote.png); */
+
+}
+.informationBox{
+    max-width: 800px;
+    min-height: calc(100% - 302px);
+    height: fit-content;
+    display: flex;
+    flex-flow: column;
+    gap: 1.5rem;
+}
+.informationBox h2{
+    color: #767676;
+    font-size: 14px;
+    font-weight: normal;
+}
+.informationBox p{
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+    white-space: pre-wrap;
+}
+.informationBox a{
+    all: unset;
+}
+.informationBox a:hover{
+    color: blue;
+}
+.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+.showWorkTitle{
+    top: 0px;
+}

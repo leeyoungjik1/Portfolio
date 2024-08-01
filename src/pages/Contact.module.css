@@ -1,0 +1,165 @@
+.contactContainer{
+    height: 100vh;
+    min-height: 1024px;
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    gap: 5.5rem;
+    position: relative;
+    /* box-sizing: border-box; */
+    /* 푸터 높이만큼 */
+    padding-bottom: 346px;
+}
+.titleBox{
+    overflow: hidden;
+    margin-top: 114px;
+    margin-left: 5.25rem;
+    
+}
+.contactContainer h1{
+    margin: 0;
+    height: 100px;
+    font-size: 122px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: ease .65s;
+    box-sizing: border-box;
+    font-weight: normal;
+    bottom: -102px;
+}
+.contactContainer form{
+    width: 626px; height: 58%;
+    display: flex;
+    flex-flow: column;
+    gap: 1.25rem;
+    position: absolute;
+    right: 5.25rem;
+    bottom: 7.5rem;
+}
+.contactContainer form>div{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    gap: 0.75rem;
+    overflow: hidden;
+    padding: 1px;
+}
+.contactContainer label:not(.descriptionTitle){
+    font-size: 14px;
+    margin: 0;
+    letter-spacing: -0.05em;
+    position: relative;
+    transition: ease .65s;
+    bottom: -85px;
+}
+.contactContainer input{
+    width: 100%;
+    height: 53px;
+    font-size: 16px;
+    background-color: #111111;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 8px;
+    padding: 0 20px;
+    margin: 0;
+    letter-spacing: -0.05em;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    font-family: "just_sans";
+    position: relative;
+    transition: ease .65s;
+    bottom: -85px;
+}
+.descriptionTitle{
+    font-size: 14px;
+    margin: 0;
+    letter-spacing: -0.05em;
+    position: relative;
+    transition: ease .65s;
+    bottom: -188px;
+}
+.description{
+    width: 100%;
+    height: 150px;
+    font-size: 16px;
+    background-color: #111111;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 0;
+    letter-spacing: -0.05em;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    font-family: "just_sans";
+    position: relative;
+    transition: ease .65s;
+    bottom: -188px;
+}
+.contactContainer button{
+    width: 100%; height: 60px;
+    letter-spacing: -0.05em;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    padding: 0;
+    margin-top: 1.75rem;
+    transition: ease .3s;
+    cursor: pointer;
+    position: relative;
+    bottom: -87px;
+}
+.contactContainer button:hover{
+    background-color: #111111;
+    color: #FFFFFF;
+}
+
+.footer{
+    width: 100%;
+    height: 346px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    bottom: -346px;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 3rem;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+/* 푸터 생성시 스크롤바 가리기 */
+/* body{
+    -ms-overflow-style: none;
+} */
+/* body::-webkit-scrollbar{
+    display:none;
+} */
+
+.textBox{
+    display: flex;
+    flex-flow: column;
+    gap: 0.75rem;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    overflow: hidden;
+}
+.textBox a{
+    height: 36px;
+}
+.textBox>div{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer p{
+    color: rgba(255, 255, 255, .4);
+    font-size: 14px;
+}
+.footer img{
+    height: 166px;
+}

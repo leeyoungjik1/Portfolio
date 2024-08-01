@@ -1,0 +1,161 @@
+.mainContainer{
+    height: 100vh;
+    min-height: 1024px;
+    padding: 4rem 5.25rem;
+    color: #FFFFFF;
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+    box-sizing: border-box;
+    justify-content: center;
+}
+p, h1, h2{
+    margin: 0;
+    letter-spacing: -0.05em;
+    cursor: default;
+}
+.sentence1{
+    display: flex;
+    align-items: flex-end;
+    gap: 40px;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+}
+.sentence1 p{
+    font-size: 122px;
+    height: 100px;
+    font-style: italic;
+    letter-spacing: -0.08em;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: ease .65s;
+    bottom: -100px;
+}
+.mainImg1{
+    width: 412px; height: 219px;
+    background-image: url(../assets/mainImg1.png);
+    position: relative;
+    transition: ease .65s;
+    bottom: -219px;
+}
+.sentence2{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 7.5rem;
+    margin-right: 5.25rem;
+    position: relative;
+    overflow: hidden;
+}
+.sentence2>div{
+    width: 312px;
+    position: relative;
+    overflow: hidden;
+}
+.sentence2>div>p:nth-child(1){
+    text-align: center;
+    position: relative;
+    transition: ease .65s;
+    left: -321px;
+}
+.sentence2>div>p:nth-child(2){
+    text-align: end;
+    position: relative;
+    transition: ease .65s;
+    right: -321px;
+}
+.sentence2>div>p:nth-child(3){
+    position: relative;
+    transition: ease .65s;
+    left: -321px;
+}
+.sentence2>p{
+    font-size: 122px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: ease .65s;
+    bottom: -100px;
+}
+.sentence3{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.sentence3>p{
+    font-size: 122px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: ease .65s;
+    bottom: -100px;
+}
+.sentence4{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.mainImg2{
+    width: 303px; height: 311px;
+    background-image: url(../assets/mainImg2.png);
+    position: relative;
+    transition: ease .65s;
+    bottom: -311px;
+}
+.sentence4>div:nth-child(2){
+    display: flex;
+    flex: 1;
+    flex-flow: column;
+    justify-content: space-between;
+}
+.mainText{
+    overflow: hidden;
+}
+.sentence4 .mainText>p{
+    font-size: 122px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: ease .65s;
+    bottom: -100px;
+}
+.sentence4>div>div{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.years{
+    position: relative;
+    transition: ease .65s;
+    bottom: -40px;
+}
+.sentence4>div>div>div{
+    overflow: hidden;
+}
+.sentence4>div>div>div>p{
+    text-align: end;
+    font-size: 20px;
+}
+.sentence4>div>div>div>p:nth-child(1){
+    position: relative;
+    transition: ease .65s;
+    right: -352px;
+}
+.sentence4>div>div>div>p:nth-child(2){
+    position: relative;
+    transition: ease .65s;
+    left: -352px;
+}
+.sentence4>div>div>div>p:nth-child(3){
+    position: relative;
+    transition: ease .65s;
+    right: -352px;
+}
