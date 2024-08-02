@@ -46,8 +46,6 @@ const MenusModal = ({isOpen, handleModal, handelLogo, page}) => {
                     <p>YOUNGJIK LEE</p>
                 </div>
             </div>
-
-
         </div>
     )
 }

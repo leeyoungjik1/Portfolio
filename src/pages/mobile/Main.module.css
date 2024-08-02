@@ -1,0 +1,197 @@
+.mainContainer{
+    height: 100vh;
+    min-height: 800px;
+    padding: 4rem 1rem;
+    color: #FFFFFF;
+    display: flex;
+    flex-flow: column;
+    gap: 1.25rem;
+    box-sizing: border-box;
+    justify-content: center;
+}
+.sentence1{
+    position: relative;
+    overflow: hidden;
+}
+.sentence1 p{
+    font-size: 50px;
+    height: 40px;
+    font-style: italic;
+    letter-spacing: -0.05em;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: ease .65s;
+    bottom: -40px;
+}
+.sentence2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    position: relative;
+    overflow: hidden;
+}
+.mainImg1{
+    width: 154px; height: 82px;
+    background-image: url(../../assets/mainImg1.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    transition: ease .65s;
+    bottom: -82px;
+}
+.sentence2Textbox{
+    width: 154px;
+    position: relative;
+    overflow: hidden;
+}
+.sentence2Textbox>p{
+    font-size: 10px;
+    height: 13px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: ease .65s;
+}
+.sentence2Textbox>p:nth-child(1){
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transition: ease .65s;
+    left: -154px;
+}
+.sentence2Textbox>p:nth-child(2){
+    display: flex;
+    justify-content: end;
+    position: relative;
+    transition: ease .65s;
+    right: -154px;
+}
+.sentence2Textbox>p:nth-child(3){
+    position: relative;
+    transition: ease .65s;
+    left: -154px;
+}
+.sentence3{
+    position: relative;
+    overflow: hidden;
+}
+.sentence3 p{
+    font-size: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: ease .65s;
+    bottom: -40px;
+}
+.sentence4{
+    position: relative;
+    overflow: hidden;
+}
+.sentence4 p{
+    font-size: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: ease .65s;
+    bottom: -40px;
+}
+.sentence5{
+    position: relative;
+    overflow: hidden;
+}
+.sentence5 p{
+    font-size: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    transition: ease .65s;
+    bottom: -40px;
+}
+.sentence6{
+    position: relative;
+    overflow: hidden;
+}
+.sentence6 p{
+    font-size: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: ease .65s;
+    bottom: -40px;
+}
+.sentence7{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+    position: relative;
+    overflow: hidden;
+}
+.mainImg2{
+    width: 174px; height: 181px;
+    background-image: url(../../assets/mainImg2.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    transition: ease .65s;
+    bottom: -181px;
+}
+.sentence7Textbox{
+    height: 181px;
+    display: flex;
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    align-items: end;
+    justify-content: space-between;
+}
+.sentence7Textbox p{
+    font-size: 10px;
+    height: 13px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: ease .65s;
+    /* bottom: -40px; */
+}
+.sentence7Textbox p:nth-child(1){
+    bottom: -13px;
+}
+.sentence7Textbox p:nth-child(2){
+    right: -88px;
+}
+.sentence8{
+    display: flex;
+    justify-content: end;
+    margin-top: -1.25rem;
+}
+.sentence8>div{
+    width: fit-content;
+    display: flex;
+    flex-flow: column;
+    align-items: end;
+    position: relative;
+    overflow: hidden;
+}
+.sentence8>div p{
+    font-size: 10px;
+    height: 13px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: ease .65s;
+}
+.sentence8>div p:nth-child(1){
+    left: -180px;
+}
+.sentence8>div p:nth-child(2){
+    right: -180px;
+}

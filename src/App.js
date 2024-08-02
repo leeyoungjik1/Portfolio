@@ -8,18 +8,24 @@ import About from './pages/About.js';
 import Works from './pages/Works.js';
 import Contact from "./pages/Contact.js";
 // import { ReactComponent as Logo } from './assets/Youngjik lee.svg'
-import GNBMO from './components/mobile/GNB.js'
+import GNBMob from './components/mobile/GNB.js'
+import MainMob from './pages/mobile/Main.js'
+import MenusModal from "./components/mobile/MenusModal.js";
+import AboutMob from './pages/mobile/About.js'
 
 function App() {
   const [location, setLocation] = useState()
+  const [isOpenModal, setIsOpenModal] = useState(false)
+
   const main = useRef(null)
   const mainPage = useRef(null)
   const aboutPage = useRef(null)
   const worksPage = useRef(null)
   const contactPage = useRef(null)
+  console.log(location)
   
   const handleScroll = () => {
-    // console.log(aboutPage.current.getBoundingClientRect().top )
+    console.log(aboutPage.current.getBoundingClientRect().top )
     // console.log(-aboutPage.current.getBoundingClientRect().height )
     if(mainPage.current.getBoundingClientRect().top <= 0  && mainPage.current.getBoundingClientRect().top > -mainPage.current.getBoundingClientRect().height){
       setLocation('main')
@@ -38,6 +44,14 @@ function App() {
     // console.log(aboutPage.current.clientTop)
     // console.log(aboutPage.current.getBoundingClientRect().top)
     // console.log(aboutPage.current.getBoundingClientRect().top)
+  }
+
+  const handelLogo = () => {
+    window.location.replace("/")
+  }
+
+  const handleModal = (isOpen) => {
+    setIsOpenModal(isOpen)
   }
 
   return (
@@ -63,10 +77,25 @@ function App() {
       </BrowserView>
       <MobileView>
         <header className="headerMob">
-          <GNBMO page={{aboutPage, worksPage, contactPage}}/>
+          <GNBMob page={{aboutPage, worksPage, contactPage}}
+            handleModal={handleModal}
+            handelLogo={handelLogo}
+            isOpenModal={isOpenModal}
+          />
         </header>
-        <main>
-
+          <MenusModal
+            isOpen={isOpenModal}
+            handleModal={handleModal}
+            handelLogo={handelLogo}
+            page={{aboutPage, worksPage, contactPage}}
+          />
+        <main onScroll={handleScroll} onLoad={handleScroll}>
+          <section ref={mainPage} className='sectionMob'>
+            <MainMob/>            
+          </section>
+          <section ref={aboutPage}>
+            <AboutMob location={location} className='sectionMob'/>
+          </section>
         </main>
       </MobileView>
     </div>

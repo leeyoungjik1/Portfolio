@@ -7,23 +7,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 // import 'swiper/css/scrollbar';
 
-const skills = [
-    {
-        name: 'HTML',
-        code: 'FaHtml5',
-        color: '#FC490B'
-    },
-    {
-        name: 'CSS',
-        code: 'FaCss3Alt',
-        color: '#2196F3'
-    },
-    {
-        name: 'JavaScript',
-        code: 'SiJavascript',
-        color: '#FFDF00'
-    }
-]
 
 const About = ({location}) => {
     const text1 = useRef(null)
@@ -45,35 +28,33 @@ const About = ({location}) => {
     const text15 = useRef(null)
     const text16 = useRef(null)
     const text17 = useRef(null)
-    const text18 = useRef(null)
-    const text19 = useRef(null)
-    const text20 = useRef(null)
-    
 
     useEffect(() => {
         if(location === 'about'){
             setTimeout(function(){
-                text1.current.style.setProperty('bottom', 0)
+                photoBox.current.style.setProperty('bottom', '0vh')
             }, 100)
             setTimeout(function(){
-                text2.current.style.setProperty('bottom', 0)
+                text1.current.style.setProperty('bottom', 0)
             }, 300)
             setTimeout(function(){
-                text3.current.style.setProperty('bottom', 0)
+                text2.current.style.setProperty('bottom', 0)
             }, 500)
+            setTimeout(function(){
+                text3.current.style.setProperty('bottom', 0)
+            }, 700)
             setTimeout(function(){
                 text4.current.style.setProperty('bottom', 0)
                 text5.current.style.setProperty('bottom', 0)
                 text6.current.style.setProperty('bottom', 0)
                 skillsBox.current.style.setProperty('bottom', 0)
-            }, 700)
+            }, 900)
             setTimeout(function(){
                 text7.current.style.setProperty('bottom', 0)
                 text8.current.style.setProperty('bottom', 0)
                 text9.current.style.setProperty('bottom', 0)
                 text10.current.style.setProperty('bottom', 0)
-                photoBox.current.style.setProperty('bottom', '0vh')
-            }, 900)
+            }, 1100)
             setTimeout(function(){
                 text11.current.style.setProperty('bottom', 0)
                 text12.current.style.setProperty('bottom', 0)
@@ -82,13 +63,19 @@ const About = ({location}) => {
                 text15.current.style.setProperty('bottom', 0)
                 text16.current.style.setProperty('bottom', 0)
                 text17.current.style.setProperty('bottom', 0)
-            }, 1100)
+            }, 1300)
         }
 
     }, [location])
 
     return (
         <div className={styles.aboutContainer}>
+            <div className={styles.photoBox}>
+                <div ref={photoBox} className={styles.photo}>
+                    <div className={styles.noiseEffect}></div>
+                    <div className={styles.blueEffect}></div>
+                </div>
+            </div>
             <div className={styles.infomationContainer}>
                 <div className={styles.titleBox}>
                     <h1 ref={text1}>ABOUT</h1>
@@ -121,7 +108,7 @@ const About = ({location}) => {
                                     centeredSlides={false}
                                     scrollbar={{ draggable: true}}
                                     style={{
-                                        width : "300px",
+                                        width : "141px",
                                         height : "100%",
                                         position: "relative",
                                         transition: "ease .65s",
@@ -224,28 +211,23 @@ const About = ({location}) => {
                             </div>
                             <div className={styles.experienceContainer}>
                                 <div>
-                                    <p ref={text12}>2023.12 ~ 2024.06 그린컴퓨터아트학원</p>
-                                    <p ref={text13} style={{fontSize:"20px"}}>- React를 활용한 프론트엔드 개발자 양성(SPA 프로젝트 개발) 과정 수료</p>
+                                    <p ref={text12} style={{fontSize:"12px"}}>2023.12 ~ 2024.06 그린컴퓨터아트학원</p>
+                                    <p ref={text13} style={{fontSize:"10px"}}>- React를 활용한 프론트엔드 개발자 양성 과정 수료</p>
                                 </div>
                                 <div>
-                                    <p ref={text14}>2019.04 ~ 2023.03 ㈜건강한한우</p>
-                                    <p ref={text15} style={{fontSize:"20px"}}>- 한우 물품 운영</p>
+                                    <p ref={text14} style={{fontSize:"12px"}}>2019.04 ~ 2023.03 ㈜건강한한우</p>
+                                    <p ref={text15} style={{fontSize:"10px"}}>- 한우 물품 운영</p>
                                 </div>
                                 <div>
-                                    <p ref={text16}>2016.06 ~ 2018.01 iCOOP인증센터</p>
-                                    <p ref={text17} style={{fontSize:"20px"}}>- 인증 농축산물 검증</p>
+                                    <p ref={text16} style={{fontSize:"12px"}}>2016.06 ~ 2018.01 iCOOP인증센터</p>
+                                    <p ref={text17} style={{fontSize:"10px"}}>- 인증 농축산물 검증</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className={styles.photoBox}>
-                <div ref={photoBox} className={styles.photo}>
-                    <div className={styles.noiseEffect}></div>
-                    <div className={styles.blueEffect}></div>
-                </div>
-            </div>
+
         </div>
     )
 }
