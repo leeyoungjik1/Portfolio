@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import styles from './Contact.module.css'
 import { FaGithub } from "react-icons/fa6";
-import lyj from '../assets/Youngjik lee.svg'
+import { ReactComponent as Lyj } from '../assets/Youngjik lee.svg'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -126,13 +126,12 @@ const Contact = ({location}) => {
                     </div>
                     <div className="slider-container">
                         <Slider {...settings}>
-                            <img src={lyj}></img>
-                            <img src={lyj}></img>
-                            <img src={lyj}></img>
-                            <img src={lyj}></img>
-                            <img src={lyj}></img>
-                            <img src={lyj}></img>
-                            <img src={lyj}></img>
+                            <Lyj/>
+                            <Lyj/>
+                            <Lyj/>
+                            <Lyj/>
+                            <Lyj/>
+                            <Lyj/>
                         </Slider>
                     </div>
 

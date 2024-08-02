@@ -119,3 +119,30 @@ main::-webkit-scrollbar{
 	transform: translate3d(0, 0, 0);
 	transition-delay: 10ms;
 }
+
+
+/* 모바일 버전 */
+
+.AppMob{
+  min-width: 360px;
+  font-family: "just_sans";
+  margin: 0;
+  position: relative;
+  background-color: black;
+}
+.AppMob>div{
+  min-width: 360px;
+  /* max-width: 1920px; */
+  margin: 0 auto;
+}
+.headerMob{
+  width: 100%;
+  min-width: 360px;
+  max-width: 1920px;
+  position: absolute;
+  top: 0;
+  z-index: 30;
+  box-sizing: border-box;
+  left: 50%;
+  transform: translate(-50%, 0);
+}

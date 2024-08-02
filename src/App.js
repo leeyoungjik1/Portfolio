@@ -1,12 +1,14 @@
 import { useState, useRef, useEffect } from "react";
 import './App.css';
 import { BrowserView, MobileView } from 'react-device-detect'
+import {isMobile} from 'react-device-detect';
 import GNB from './components/GNB.js';
 import Main from "./pages/Main.js";
 import About from './pages/About.js';
 import Works from './pages/Works.js';
 import Contact from "./pages/Contact.js";
 // import { ReactComponent as Logo } from './assets/Youngjik lee.svg'
+import GNBMO from './components/mobile/GNB.js'
 
 function App() {
   const [location, setLocation] = useState()
@@ -39,7 +41,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className={!isMobile ? "App" : "AppMob"}>
       <BrowserView>
         <header className="header">
           <GNB page={{aboutPage, worksPage, contactPage}}/>
@@ -60,7 +62,12 @@ function App() {
         </main>
       </BrowserView>
       <MobileView>
-        <h1>mobile</h1>
+        <header className="headerMob">
+          <GNBMO page={{aboutPage, worksPage, contactPage}}/>
+        </header>
+        <main>
+
+        </main>
       </MobileView>
     </div>
   );
