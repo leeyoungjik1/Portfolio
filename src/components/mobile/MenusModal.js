@@ -14,9 +14,10 @@ const MenusModal = ({isOpen, handleModal, handelLogo, page}) => {
     }
 
     const handleClick = (e) => {
-        // if(e.target.innerHTML === 'ABOUT'){
-        //     page.aboutPage.current.scrollIntoView(true)
-        // }else if(e.target.innerHTML === 'WORKS'){
+        if(e.target.innerHTML === 'ABOUT'){
+            page.aboutPage.current.scrollIntoView(true)
+        }
+        // else if(e.target.innerHTML === 'WORKS'){
         //     page.worksPage.current.scrollIntoView(true)
         // }else if(e.target.innerHTML === 'CONTACT'){
         //     page.contactPage.current.scrollIntoView(true)

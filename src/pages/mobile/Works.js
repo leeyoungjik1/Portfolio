@@ -4,9 +4,9 @@ import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 // import 'swiper/css/navigation';
-import WorkModal from "../components/WorkModal";
-import imgTravelNote from "../assets/travelnote.png"
-import imgFlowerth from "../assets/flowerth.png"
+import WorkModal from "../../components/mobile/WorkModal";
+import imgTravelNote from "../../assets/travelnote.png"
+import imgFlowerth from "../../assets/flowerth.png"
 
 const works = [
     {
@@ -18,31 +18,11 @@ const works = [
         name: "꽃뜨 도자기카페",
         imgSrc: imgFlowerth,
         numberOfImg: 0
-    },
-    {
-        name: "TBD",
-        numberOfImg: 0
-    },
-    {
-        name: "TBD",
-        numberOfImg: 0
-    },
-    {
-        name: "TBD",
-        numberOfImg: 0
-    },
-    {
-        name: "TBD",
-        numberOfImg: 0
-    },
-    {
-        name: "TBD",
-        numberOfImg: 0
-    },
-    {
-        name: "TBD",
-        numberOfImg: 0
-    },
+    }
+    // {
+    //     name: "TBD",
+    //     numberOfImg: 0
+    // }
 ]
  
 
@@ -73,7 +53,11 @@ const Works = ({location, main}) => {
         }
 
     }, [location])
-    
+
+    useEffect(() => {
+        const test = document.createElement('div')
+        console.log(test)
+    }, [])
 
     return (
         <div className={styles.WorksContainer}>
@@ -84,6 +68,10 @@ const Works = ({location, main}) => {
             <Swiper
                 modules={[Navigation]}
                 spaceBetween={20}
+                // centeredSlides={true}
+                // centerInsufficientSlides={true}
+                // centeredSlidesBounds={true}
+                // allowTouchMove={false}
                 slidesPerView={"auto"}
                 navigation
                 onSwiper={(swiper) => {
@@ -91,23 +79,21 @@ const Works = ({location, main}) => {
                 }}
                 onClick={(swiper) => {
                     if(swiper.clickedSlide && swiper.clickedSlide.id !== 'TBD'){
+                        console.log('클릭')
                         setIsOpenModal(true)
                         setClickedSlide(swiper.clickedSlide)
-                        main.current.style.setProperty('overflow', 'hidden')
                         for(let slide of slides){
-                            slide.style.setProperty('transform', 'scale(0.66)')
+                            slide.style.setProperty('opacity', '0')
                         }
                     }
                 }}
                 style={{
-                    width: "calc(100% - 5.25rem)",
+                    width: "100%",
                     flex: "1",
-                    marginLeft: "5.25rem",
-                    marginBottom: "3rem",
+                    // marginBottom: "3rem",
                     boxSizing: "border-box",
                     position: "relative",
                     transition: "ease .65s",
-                    bottom: "calc(-100% + 302px)",
                     boxSizing: "border-box"
                 }}
                 ref={worksBox}
@@ -121,8 +107,6 @@ const Works = ({location, main}) => {
                                 width: "fit-content",
                                 height: "fit-content",
                                 display: "flex",
-                                transition: "ease .65s",
-                                overflow: "hidden"
                             }}
                         >
                             <div ref={(el) => {workRefs.current[id] = el}} className={styles.workContainer}>
@@ -150,8 +134,6 @@ const Works = ({location, main}) => {
                 location={location}
                 clickedSlide={clickedSlide}
             />
-            
-            {/* <div className={styles.test}></div> */}
         </div>
     )
 }

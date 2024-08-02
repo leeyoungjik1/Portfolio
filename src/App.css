@@ -146,9 +146,9 @@ main::-webkit-scrollbar{
   left: 50%;
   transform: translate(-50%, 0);
 }
-.section{
+.sectionMob{
   width: 100%;
   min-height: 800px;
-  scroll-snap-align: start;
+  /* scroll-snap-align: center; */
   margin: 0 auto;
 }

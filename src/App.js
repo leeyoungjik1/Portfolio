@@ -12,6 +12,7 @@ import GNBMob from './components/mobile/GNB.js'
 import MainMob from './pages/mobile/Main.js'
 import MenusModal from "./components/mobile/MenusModal.js";
 import AboutMob from './pages/mobile/About.js'
+import WorksMob from './pages/mobile/Works.js'
 
 function App() {
   const [location, setLocation] = useState()
@@ -25,7 +26,7 @@ function App() {
   console.log(location)
   
   const handleScroll = () => {
-    console.log(aboutPage.current.getBoundingClientRect().top )
+    // console.log(aboutPage.current.getBoundingClientRect().top )
     // console.log(-aboutPage.current.getBoundingClientRect().height )
     if(mainPage.current.getBoundingClientRect().top <= 0  && mainPage.current.getBoundingClientRect().top > -mainPage.current.getBoundingClientRect().height){
       setLocation('main')
@@ -89,12 +90,15 @@ function App() {
             handelLogo={handelLogo}
             page={{aboutPage, worksPage, contactPage}}
           />
-        <main onScroll={handleScroll} onLoad={handleScroll}>
+        <main ref={main} onScroll={handleScroll} onLoad={handleScroll}>
           <section ref={mainPage} className='sectionMob'>
             <MainMob/>            
           </section>
           <section ref={aboutPage}>
             <AboutMob location={location} className='sectionMob'/>
+          </section>
+          <section ref={worksPage} className='sectionMob'>
+            <WorksMob location={location} main={main}/>
           </section>
         </main>
       </MobileView>

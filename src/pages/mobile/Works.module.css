@@ -1,0 +1,64 @@
+.WorksContainer{
+    height: 100vh;
+    min-height: 800px;
+    box-sizing: border-box;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    gap: 2.25rem;
+    /* position: relative; */
+    padding: calc(3rem - 66px) 1rem;
+}
+.titleBox{
+    overflow: hidden;
+    margin-top: 114px;
+    /* margin-left: 5.25rem; */
+    visibility: hidden;
+}
+.WorksContainer h1{
+    margin: 0;
+    height: 40px;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: ease .65s;
+    box-sizing: border-box;
+    font-weight: normal;
+    /* bottom: -102px; */
+}
+.workContainer{
+    display: flex;
+    flex-flow: column;
+    gap: 1.5rem;
+    position: relative;
+    transition: ease .65s;
+    /* bottom: -500px; */
+}
+.mainImg{
+    width: 303px;
+    height: 420px;
+    background-color: #181818;
+    z-index: 2;
+}
+.workTitle{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: ease .65s;
+    top: 0px;
+}
+.workTitle h2{
+    font-size: 24px;
+    font-weight: normal;
+}
+.workTitle p{
+    font-size: 14px;
+    color: #767676;
+}
+.hideWorkTitle{
+    top: -100px;
+}
+

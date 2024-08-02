@@ -5,8 +5,6 @@ import { SiJavascript, SiMongodb } from "react-icons/si";
 import { Scrollbar} from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-// import 'swiper/css/scrollbar';
-
 
 const About = ({location}) => {
     const text1 = useRef(null)
