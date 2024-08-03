@@ -200,7 +200,7 @@ const About = ({location}) => {
                                 <div className={styles.h2Container}>
                                     <h2 ref={text9}>EMAIL</h2>
                                 </div>
-                                <p ref={text10}>eog91@naver.com</p>
+                                <p ref={text10}>eog911@gmail.com</p>
                             </div>
                         </div>
                         <div className={styles.experienceBox}>
