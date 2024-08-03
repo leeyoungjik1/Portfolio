@@ -14,7 +14,6 @@ import imgTravelNote7 from "../../assets/travelnote7.png"
 import mainImgFlowerth from "../../assets/flowerth.png"
 
 const WorkModal = ({isOpen, handleModal, slides, location, clickedSlide}) => {
-    console.log(isOpen)
     const [work, setWork] = useState()
 
     const works = [

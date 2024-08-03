@@ -14,7 +14,6 @@ import MenusModal from "./components/mobile/MenusModal.js";
 import AboutMob from './pages/mobile/About.js'
 import WorksMob from './pages/mobile/Works.js'
 import ContactMob from './pages/mobile/Contact.js'
-import FooterMob from "./pages/mobile/Footer.js";
 
 function App() {
   const [location, setLocation] = useState()
@@ -63,7 +62,7 @@ function App() {
         <header className="header">
           <GNB page={{aboutPage, worksPage, contactPage}}/>
         </header>
-        <main ref={main} onScroll={handleScroll} onLoad={handleScroll}>
+        <main className='main' ref={main} onScroll={handleScroll} onLoad={handleScroll}>
           <section ref={mainPage} className='section'>
             <Main/>            
           </section>
@@ -92,7 +91,7 @@ function App() {
             handelLogo={handelLogo}
             page={{aboutPage, worksPage, contactPage}}
           />
-        <main ref={main} onScroll={handleScroll} onLoad={handleScroll}>
+        <main className='mainMob' ref={main} onScroll={handleScroll} onLoad={handleScroll}>
           <section ref={mainPage} className='sectionMob'>
             <MainMob/>            
           </section>
@@ -106,7 +105,6 @@ function App() {
             <ContactMob location={location}/>
           </section>
         </main>
-        <FooterMob/>
       </MobileView>
     </div>
   );
