@@ -33,27 +33,26 @@ const Contact = ({location}) => {
     }
 
     const sendEmail = (e) => {
-        e.preventDefault();
-    
+        e.preventDefault()
+
         emailjs
-          .sendForm('service_tjr33hf', 'template_5eocj4g', form.current, {
-            publicKey: 'g-BAwwrOwTFLUKAKd',
-          })
-          .then(
-            () => {
-              alert('이메일 전송이 완료되었습니다.')
-              setFormData({
-                name: '',
-                email: '',
-                title: '',
-                message: ''
+            .sendForm('service_tjr33hf', 'template_5eocj4g', form.current, {
+                publicKey: 'g-BAwwrOwTFLUKAKd',
             })
-            },
-            (error) => {
-              console.log('FAILED...', error.text);
-            },
-          );
-      };
+            .then(
+                () => {
+                    alert('이메일 전송이 완료되었습니다.')
+                    setFormData({
+                    name: '',
+                    email: '',
+                    title: '',
+                    message: ''
+                })},
+                (error) => {
+                    console.log('FAILED...', error.text)
+                },
+            )
+    }
 
     const settings = {
         infinite: true,
@@ -156,7 +155,6 @@ const Contact = ({location}) => {
                     <div>
                         <button ref={button} type="submit">SEND REQUEST</button>
                     </div>
-
                 </form>
             </div>
             {location === 'contact' && 
