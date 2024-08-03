@@ -82,30 +82,6 @@ main::-webkit-scrollbar{
   left: 0;
   top: 0;
 }
-.swiper-button-prev, .swiper-button-next{
-  width: 48px;
-  height: 48px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 50%;
-  position: absolute;
-  bottom: 0;
-  background-position: center;
-  background-size: 24px 24px;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  z-index: 10;
-  box-sizing: border-box;
-  transform: translate(-50%, 0);
-  margin: 0 -2rem;
-}
-.swiper-button-prev{
-  background-image: url(./assets/prevButton.svg);
-  left: calc(43% - 0.75rem);
-}
-.swiper-button-next{
-  background-image: url(./assets/nextButton.svg);
-  right: calc(43% + 10.5rem - 0.75rem);
-}
 .slider-container{
   width: 100%;
   height: 166px;
@@ -119,7 +95,14 @@ main::-webkit-scrollbar{
 	transform: translate3d(0, 0, 0);
 	transition-delay: 10ms;
 }
-
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: #FFFFFF;
+  -webkit-box-shadow: 0 0 0px 1000px #111111 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
 
 /* 모바일 버전 */
 
@@ -151,4 +134,8 @@ main::-webkit-scrollbar{
   min-height: 800px;
   /* scroll-snap-align: center; */
   margin: 0 auto;
+}
+.slider-containerMob{
+  width: 100%;
+  height: 42px;
 }

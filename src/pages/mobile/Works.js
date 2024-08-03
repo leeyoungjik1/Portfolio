@@ -30,12 +30,16 @@ const Works = ({location, main}) => {
     const [isOpenModal, setIsOpenModal] = useState(false)
     const [slides, setSlides] = useState()
     const [clickedSlide, setClickedSlide] = useState()
-    const handleModal = (isOpen) => {
-        setIsOpenModal(isOpen)
-    }
+
     const text1 = useRef(null)
     const worksBox = useRef(null)
     const workRefs = useRef(new Array(works.length))
+    const navigationNextRef = useRef(null)
+    const navigationPrevRef = useRef(null)
+
+    const handleModal = (isOpen) => {
+        setIsOpenModal(isOpen)
+    }
 
     useEffect(() => {
         if(location === 'works'){
@@ -44,6 +48,8 @@ const Works = ({location, main}) => {
             }, 100)
             setTimeout(function(){
                 worksBox.current.style.setProperty('bottom', 0)
+                navigationNextRef.current.style.setProperty('bottom', 0)
+                navigationPrevRef.current.style.setProperty('bottom', 0)
             }, 200)
             for(let workRef in workRefs.current){
                 setTimeout(function(){
@@ -51,20 +57,13 @@ const Works = ({location, main}) => {
                 }, 400+(workRef*200))
             }
         }
-
     }, [location])
-
-    useEffect(() => {
-        const test = document.createElement('div')
-        console.log(test)
-    }, [])
 
     return (
         <div className={styles.WorksContainer}>
             <div className={styles.titleBox}>
                 <h1 ref={text1}>WORKS</h1>
             </div>
-
             <Swiper
                 modules={[Navigation]}
                 spaceBetween={20}
@@ -73,7 +72,10 @@ const Works = ({location, main}) => {
                 // centeredSlidesBounds={true}
                 // allowTouchMove={false}
                 slidesPerView={"auto"}
-                navigation
+                navigation={{
+                    prevEl: navigationPrevRef.current,
+                    nextEl: navigationNextRef.current,
+                }}
                 onSwiper={(swiper) => {
                     setSlides(swiper.slides)
                 }}
@@ -89,12 +91,10 @@ const Works = ({location, main}) => {
                 }}
                 style={{
                     width: "100%",
-                    flex: "1",
-                    // marginBottom: "3rem",
                     boxSizing: "border-box",
                     position: "relative",
                     transition: "ease .65s",
-                    boxSizing: "border-box"
+                    boxSizing: "border-box",
                 }}
                 ref={worksBox}
             >
@@ -126,6 +126,10 @@ const Works = ({location, main}) => {
                     )
                 })}
             </Swiper>
+            <div className={styles.swiperBtns}>
+                <button className={styles.prevBtn} ref={navigationPrevRef}></button>
+                <button className={styles.nextBtn} ref={navigationNextRef}></button>
+            </div>
             <WorkModal
                 isOpen={isOpenModal}
                 handleModal={handleModal}

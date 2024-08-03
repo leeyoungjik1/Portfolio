@@ -50,12 +50,16 @@ const Works = ({location, main}) => {
     const [isOpenModal, setIsOpenModal] = useState(false)
     const [slides, setSlides] = useState()
     const [clickedSlide, setClickedSlide] = useState()
-    const handleModal = (isOpen) => {
-        setIsOpenModal(isOpen)
-    }
+
     const text1 = useRef(null)
     const worksBox = useRef(null)
     const workRefs = useRef(new Array(works.length))
+    const navigationNextRef = useRef(null)
+    const navigationPrevRef = useRef(null)
+
+    const handleModal = (isOpen) => {
+        setIsOpenModal(isOpen)
+    }
 
     useEffect(() => {
         if(location === 'works'){
@@ -85,7 +89,10 @@ const Works = ({location, main}) => {
                 modules={[Navigation]}
                 spaceBetween={20}
                 slidesPerView={"auto"}
-                navigation
+                navigation={{
+                    prevEl: navigationPrevRef.current,
+                    nextEl: navigationNextRef.current,
+                }}
                 onSwiper={(swiper) => {
                     setSlides(swiper.slides)
                 }}
@@ -101,9 +108,9 @@ const Works = ({location, main}) => {
                 }}
                 style={{
                     width: "calc(100% - 5.25rem)",
-                    flex: "1",
+                    // flex: "1",
                     marginLeft: "5.25rem",
-                    marginBottom: "3rem",
+                    // marginBottom: "3rem",
                     boxSizing: "border-box",
                     position: "relative",
                     transition: "ease .65s",
@@ -142,6 +149,10 @@ const Works = ({location, main}) => {
                     )
                 })}
             </Swiper>
+            <div className={styles.swiperBtns}>
+                <button className={styles.prevBtn} ref={navigationPrevRef}></button>
+                <button className={styles.nextBtn} ref={navigationNextRef}></button>
+            </div>
             <WorkModal
                 isOpen={isOpenModal}
                 handleModal={handleModal}

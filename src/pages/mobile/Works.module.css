@@ -7,12 +7,10 @@
     flex-flow: column;
     gap: 2.25rem;
     /* position: relative; */
-    padding: calc(3rem - 66px) 1rem;
+    padding: 114px 1rem 3rem 1rem;
 }
 .titleBox{
     overflow: hidden;
-    margin-top: 114px;
-    /* margin-left: 5.25rem; */
 }
 .WorksContainer h1{
     margin: 0;
@@ -24,7 +22,7 @@
     transition: ease .65s;
     box-sizing: border-box;
     font-weight: normal;
-    /* bottom: -102px; */
+    bottom: -40px;
 }
 .workContainer{
     display: flex;
@@ -32,7 +30,7 @@
     gap: 1.5rem;
     position: relative;
     transition: ease .65s;
-    /* bottom: -500px; */
+    bottom: -500px;
 }
 .mainImg{
     width: 303px;
@@ -60,4 +58,28 @@
 .hideWorkTitle{
     top: -100px;
 }
-
+.swiperBtns{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    overflow: hidden;
+}
+.prevBtn, .nextBtn{
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: unset;
+    cursor: pointer;
+    position: relative;
+    transition: ease .65s;
+    bottom: -36px;
+}
+.prevBtn{
+    background-image: url(../../assets/prevButton.svg);
+}
+.nextBtn{
+    background-image: url(../../assets/nextButton.svg);
+}

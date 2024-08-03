@@ -16,14 +16,16 @@ const MenusModal = ({isOpen, handleModal, handelLogo, page}) => {
     const handleClick = (e) => {
         if(e.target.innerHTML === 'ABOUT'){
             page.aboutPage.current.scrollIntoView(true)
+            handleModal(false)
         }else if(e.target.innerHTML === 'WORKS'){
             page.worksPage.current.scrollIntoView(true)
-        }
-        // else if(e.target.innerHTML === 'CONTACT'){
-        //     page.contactPage.current.scrollIntoView(true)
-        // }
-        else if(e.target.innerHTML === 'GITHUB'){
+            handleModal(false)
+        }else if(e.target.innerHTML === 'CONTACT'){
+            page.contactPage.current.scrollIntoView(true)
+            handleModal(false)
+        }else if(e.target.innerHTML === 'GITHUB'){
             window.open('https://github.com/leeyoungjik1')
+            handleModal(false)
         }
     }
 

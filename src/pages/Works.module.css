@@ -69,3 +69,24 @@
     display: flex;
     flex-flow: column;
 }
+.swiperBtns{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.prevBtn, .nextBtn{
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: unset;
+    cursor: pointer;
+}
+.prevBtn{
+    background-image: url(../assets/prevButton.svg);
+}
+.nextBtn{
+    background-image: url(../assets/nextButton.svg);
+}

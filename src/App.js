@@ -13,6 +13,8 @@ import MainMob from './pages/mobile/Main.js'
 import MenusModal from "./components/mobile/MenusModal.js";
 import AboutMob from './pages/mobile/About.js'
 import WorksMob from './pages/mobile/Works.js'
+import ContactMob from './pages/mobile/Contact.js'
+import FooterMob from "./pages/mobile/Footer.js";
 
 function App() {
   const [location, setLocation] = useState()
@@ -100,7 +102,11 @@ function App() {
           <section ref={worksPage} className='sectionMob'>
             <WorksMob location={location} main={main}/>
           </section>
+          <section ref={contactPage} className='sectionMob'>
+            <ContactMob location={location}/>
+          </section>
         </main>
+        <FooterMob/>
       </MobileView>
     </div>
   );
