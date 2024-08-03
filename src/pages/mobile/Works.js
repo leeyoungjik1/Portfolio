@@ -67,7 +67,8 @@ const Works = ({location, main}) => {
             <Swiper
                 modules={[Navigation]}
                 spaceBetween={20}
-                // centeredSlides={true}
+                centeredSlides={true}
+                // slidesOffsetBefore={20}
                 // centerInsufficientSlides={true}
                 // centeredSlidesBounds={true}
                 // allowTouchMove={false}
