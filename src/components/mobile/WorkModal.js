@@ -12,6 +12,15 @@ import imgTravelNote5 from "../../assets/travelnote5.png"
 import imgTravelNote6 from "../../assets/travelnote6.png"
 import imgTravelNote7 from "../../assets/travelnote7.png"
 import mainImgFlowerth from "../../assets/flowerth.png"
+import imgFlowerth1 from "../../assets/flowerth1.png"
+import imgFlowerth2 from "../../assets/flowerth2.png"
+import imgFlowerth3 from "../../assets/flowerth3.png"
+import imgFlowerth4 from "../../assets/flowerth4.png"
+import mainImgMichaelKors from "../../assets/michaelkors.jpg"
+import imgMichaelKors1 from "../../assets/michaelkors1.png"
+import imgMichaelKors2 from "../../assets/michaelkors2.png"
+import imgMichaelKors3 from "../../assets/michaelkors3.png"
+import imgMichaelKors4 from "../../assets/michaelkors4.png"
 
 const WorkModal = ({isOpen, handleModal, slides, location, clickedSlide}) => {
     const [work, setWork] = useState()
@@ -38,7 +47,18 @@ const WorkModal = ({isOpen, handleModal, slides, location, clickedSlide}) => {
             techStack: "HTML, CSS, JavaScript",
             contribution : "100%",
             mainImgSrc: mainImgFlowerth,
-            imgSrcs: []
+            imgSrcs: [imgFlowerth1, imgFlowerth2, imgFlowerth3, imgFlowerth4]
+        },
+        {
+            name: "Michael Kors",
+            url: "https://michaelkors-clone.vercel.app/",
+            description: "michaelkors-collection.com의 clone page",
+            period: "24.03.08",
+            functions: "이미지 팝업 슬라이드",
+            techStack: "HTML, CSS, JavaScript",
+            contribution : "100%",
+            mainImgSrc: mainImgMichaelKors,
+            imgSrcs: [imgMichaelKors1, imgMichaelKors2, imgMichaelKors3, imgMichaelKors4]
         }
     ]
 

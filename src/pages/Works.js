@@ -7,6 +7,7 @@ import 'swiper/css';
 import WorkModal from "../components/WorkModal";
 import imgTravelNote from "../assets/travelnote.png"
 import imgFlowerth from "../assets/flowerth.png"
+import imgMichaelKors from "../assets/michaelkors.jpg"
 
 const works = [
     {
@@ -17,11 +18,12 @@ const works = [
     {
         name: "꽃뜨 도자기카페",
         imgSrc: imgFlowerth,
-        numberOfImg: 0
+        numberOfImg: 4
     },
     {
-        name: "TBD",
-        numberOfImg: 0
+        name: "Michael Kors",
+        imgSrc: imgMichaelKors,
+        numberOfImg: 4
     },
     {
         name: "TBD",
